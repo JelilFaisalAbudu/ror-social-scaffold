@@ -1,5 +1,22 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
+  <h3>Friends</h3>
+  <ul>
+    <% @user.friendships.each do | friendship | %>
+      <li>
+        <h4><%= friendship.friend.name %></h4>
+        <%= link_to 'Remove', friendship, method: :delete %>
+      </li>
+    <% end %>
+    <% @user.inverse_friendships.each do | inverse_friendship | %>
+      <li>
+        <h4><%= inverse_friendship.user.name %></h4>
+        <%= link_to 'Remove', inverse_friendship, method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+
+
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
