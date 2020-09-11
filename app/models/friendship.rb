@@ -2,20 +2,18 @@ class Friendship < ApplicationRecord
   belongs_to :user
   belongs_to :friend, class_name: 'User'
 
-
-
-  # Check to find out if there exist between these two 
+  # Check to find out if there exist between these two
   def self.exist?(user, friend)
     !find_by_user_id_and_friend_id(user, friend).nil?
   end
 
   #  For sending friend rquests
   def self.request(user, friend)
-    unless user == friend || Friendship.exist?(user, friend)
-      transaction do
-        create(user: user, friend: friend, status: 'pending')
-        create(user: friend, friend: user, status: 'requested')
-      end
+    return if user == friend || Friendship.exist?(user, friend)
+
+    transaction do
+      create(user: user, friend: friend, status: 'pending')
+      create(user: friend, friend: user, status: 'requested')
     end
   end
 
@@ -38,8 +36,6 @@ class Friendship < ApplicationRecord
     end
   end
 
-  private
-
   #  For updating the status and updated time of acceptace
   def self.accept_one_side(user, friend, accepted_at)
     request = find_by_user_id_and_friend_id(user, friend)
@@ -47,4 +43,6 @@ class Friendship < ApplicationRecord
     request.updated_at = accepted_at
     request.save!
   end
+
+  validates :status, presence: true
 end
