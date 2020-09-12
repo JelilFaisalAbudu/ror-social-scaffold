@@ -1,5 +1,8 @@
 <section class="user-section">
-
+	<h2>
+	 	<%= "Name: #{@user.name}" %>
+		<%= ask_friendship_or(current_user, @user) %>
+	</h2>
   <table>
 	<tr>
 		<th colspan="3" >
