@@ -16,5 +16,5 @@ module ApplicationHelper
     end
   end
 
-  def can_view_content; end
+  
 end
