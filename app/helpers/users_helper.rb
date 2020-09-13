@@ -12,7 +12,17 @@ module UsersHelper
 			link_to 'Delete', friendship_path(user_id: current_user, friend_id: friend), method: :delete
 		end
 	end
-	
+	def requested_friends
+		if current_user?
+			render 'requested_friends'
+		end
+	end
+
+	def pending_friends
+		if current_user?
+			render 'pending_friends'
+		end
+	end
 
 	private
 
