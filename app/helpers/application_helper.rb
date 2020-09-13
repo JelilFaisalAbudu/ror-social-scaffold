@@ -26,14 +26,10 @@ module ApplicationHelper
   end
 
   def display_flash_notice(notice)
-    if notice.present?
-      render 'shared/notice'
-    end
+    render 'shared/notice' if notice.present?
   end
 
   def display_flash_alert(alert)
-    if alert.present?
-      render 'shared/alert'
-    end
+    render 'shared/alert' if alert.present?
   end
 end

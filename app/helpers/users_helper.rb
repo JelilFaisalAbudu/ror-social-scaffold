@@ -19,7 +19,6 @@ module UsersHelper
     render 'pending_friends' if current_user?
   end
 
-
   private
 
   def current_user?
