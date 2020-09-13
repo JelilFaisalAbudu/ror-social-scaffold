@@ -16,5 +16,24 @@ module ApplicationHelper
     end
   end
 
-  
+  def session_check_for(current_user)
+    if current_user
+      render 'shared/user_info'
+
+    else
+      link_to 'Sign in', user_session_path
+    end
+  end
+
+  def display_flash_notice(notice)
+    if notice.present?
+      render 'shared/notice'
+    end
+  end
+
+  def display_flash_alert(alert)
+    if alert.present?
+      render 'shared/alert'
+    end
+  end
 end
