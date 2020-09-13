@@ -1,15 +1,15 @@
 <tr>
-		<th colspan="3" >
-			<%= pluralize(@user.friends.count, "friend") %>
-		</th>
+	<th colspan="3" >
+		<%= pluralize(@user.friends.count, "friend") %>
+	</th>
+</tr>
+<% @user.friends.each do |friend| %>
+	<tr>
+		<td width="50">
+			<%= link_to friend.name, user_path(friend) %>
+		</td>
+		<td>
+		<%= delete_friend(friend) %>
+		</td>
 	</tr>
-	<% @user.friends.each do |friend| %>
-		<tr>
-			<td width="50">
-				<%= link_to friend.name, user_path(friend) %>
-			</td>
-			<td>
-			<%= delete_friend(friend) %>
-			</td>
-		</tr>
-	<% end %>
+<% end %>
