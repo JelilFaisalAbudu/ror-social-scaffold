@@ -17,16 +17,8 @@ module UsersHelper
 
   def pending_friends
     render 'pending_friends' if current_user?
-	end
-	
-	def session_check_for(current_user)
-    if current_user
-      render 'user_info'
-
-    else
-      link_to 'Sign in', user_session_path
-    end
   end
+
 
   private
 
