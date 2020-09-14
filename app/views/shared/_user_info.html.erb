@@ -1,0 +1,3 @@
+<%= link_to "Friend Requests(#{current_user.requested_friends.count})", user_path(current_user) %>
+<%= link_to current_user.name, user_path(current_user) %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>

@@ -15,4 +15,21 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+  def session_check_for(current_user)
+    if current_user
+      render 'shared/user_info'
+
+    else
+      link_to 'Sign in', user_session_path
+    end
+  end
+
+  def display_flash_notice(notice)
+    render 'shared/notice' if notice.present?
+  end
+
+  def display_flash_alert(alert)
+    render 'shared/alert' if alert.present?
+  end
 end
