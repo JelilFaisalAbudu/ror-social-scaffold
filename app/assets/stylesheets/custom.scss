@@ -72,7 +72,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
 }
 
 .notice,
@@ -283,7 +282,14 @@ form {
   .users-list li {
     margin-bottom: 16px;
     text-transform: capitalize;
-    font-size: 1.2em;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .users-list button {
+    width: 20%;
+    text-align: center;
+    margin: auto;
   }
 
   .profile-link {
@@ -323,6 +329,134 @@ form {
   }
 }
 
+// My Own Styling
+
+.card-img-top {
+  height: 40vh;
+}
+
+.user-section .container-fluid {
+  background-color: palegreen;
+}
+
+
+h5 {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  line-height: 1.2857em;
+  margin: 0;
+}
+
+.card {
+  font-size: 1em;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+  font-size: 1em;
+  position: relative;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, .1);
+  box-shadow: none;
+}
+
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+
+.card-title {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  line-height: 1.2857em;
+  margin-top: 2em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.card-text {
+  clear: both;
+  margin-top: .5em;
+  color: rgba(0, 0, 0, .68);
+}
+
+.card-footer {
+  font-size: 1em;
+  position: static;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  padding: .75em 1em;
+  color: rgba(0, 0, 0, .4);
+  border-top: 1px solid rgba(0, 0, 0, .05) !important;
+  background: #fff;
+}
+
+.card-inverse .btn {
+  border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.profile {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.profile-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile-inline {
+  position: relative;
+  top: 0;
+  display: inline-block;
+}
+
+.profile-inline ~ .card-title {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: top;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.meta {
+  font-size: 1em;
+  color: rgba(0, 0, 0, .4);
+}
+
+.meta a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .4);
+}
+
+.meta a:hover {
+  color: rgba(0, 0, 0, .87);
+}
+
 @media only screen and (min-width: 480px) {
   form {
     width: 60%;
@@ -330,8 +464,7 @@ form {
 
   .new_post,
   .timeline,
-  .users-section,
-  .user-section {
+  .users-section {
     width: 70%;
   }
 }
@@ -343,8 +476,7 @@ form {
 
   .new_post,
   .timeline,
-  .users-section,
-  .user-section {
+  .users-section {
     width: 50%;
   }
 }
