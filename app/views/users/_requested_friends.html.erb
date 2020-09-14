@@ -1,15 +1,22 @@
-
-<tr>
-	<th colspan="3">
-		<%= pluralize(@user.requested_friends.count, "requested friend") %>
-	</th>
-</tr>
-<% @user.requested_friends.each do |requester| %>
-	<tr>
-		<td><%= link_to requester.name, user_path(requester) %></td>
-		<td>
-			<%= link_to 'Delete', decline_path(user_id: current_user, friend_id: requester), method: :delete %>/
-			<%= link_to 'Accept', friendship_path(user_id: current_user, friend_id: requester), method: :patch %>
-		</td>
-	</tr>
-<% end %>
+<div class="dropdown col col-md-4">
+	<button class="btn btn-secondary dropdown-toggle w-100 text-bolder" type="button" id="dropdownMenuButton"
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<%= pluralize(@user.requested_friends.count, "Requested Friend") %>
+	</button>
+	<div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+		<div class="card">
+			<ul class="list-group list-group-flush">
+				<% @user.requested_friends.each do |requester| %>
+				<li class="list-group-item dropdown-item">
+					<%= link_to requester.name, user_path(requester) %> %>
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<%= link_to 'Delete', decline_path(user_id: current_user, friend_id: requester), class: 'btn btn-danger', method: :delete %>
+						<%= link_to 'Accept', friendship_path(user_id: current_user, friend_id: requester), class: 'btn btn-primary', method: :patch %>
+					</div>
+					<br>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
