@@ -302,7 +302,6 @@ form {
 .user-section {
   width: 100%;
 
-
   h2 {
     text-transform: capitalize;
   }
@@ -331,14 +330,9 @@ form {
 
 // My Own Styling
 
-.card-img-top {
-  height: 40vh;
-}
-
 .user-section .container-fluid {
   background-color: palegreen;
 }
-
 
 h5 {
   font-size: 1.28571429em;
@@ -352,7 +346,7 @@ h5 {
   overflow: hidden;
   padding: 0;
   border: none;
-  border-radius: .28571429rem;
+  border-radius: 0.28571429rem;
   box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
 
@@ -362,7 +356,7 @@ h5 {
   margin: 0;
   padding: 1em;
   border: none;
-  border-top: 1px solid rgba(34, 36, 38, .1);
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
   box-shadow: none;
 }
 
@@ -383,8 +377,8 @@ h5 {
 
 .card-text {
   clear: both;
-  margin-top: .5em;
-  color: rgba(0, 0, 0, .68);
+  margin-top: 0.5em;
+  color: rgba(0, 0, 0, 0.68);
 }
 
 .card-footer {
@@ -393,14 +387,14 @@ h5 {
   top: 0;
   left: 0;
   max-width: 100%;
-  padding: .75em 1em;
-  color: rgba(0, 0, 0, .4);
-  border-top: 1px solid rgba(0, 0, 0, .05) !important;
+  padding: 0.75em 1em;
+  color: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
   background: #fff;
 }
 
 .card-inverse .btn {
-  border: 1px solid rgba(0, 0, 0, .05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .profile {
