@@ -3,8 +3,8 @@ module FriendshipsHelper
     friendship = Friendship.find_by_user_id_and_friend_id(user, friend)
     return if !friendship.nil? || user == friend
 
-    content_tag(:button, class: 'btn btn-primary') do
-      link_to 'Add Friend', friendships_path(user_id: user, friend_id: friend), method: :post
+    content_tag(:button, class: 'btn btn-info btn-lg btn-block') do
+      link_to 'Add Friend', friendships_path(user_id: user, friend_id: friend), method: :post, class: 'text-white'
     end
   end
 
