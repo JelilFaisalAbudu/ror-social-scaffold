@@ -8,7 +8,7 @@
 			<ul class="list-group list-group-flush">
 				<% @user.requested_friends.each do |requester| %>
 				<li class="list-group-item dropdown-item">
-					<%= link_to requester.name, user_path(requester) %> %>
+					<%= link_to requester.name, user_path(requester) %>
 					<div class="btn-group" role="group" aria-label="Basic example">
 						<%= link_to 'Delete', decline_path(user_id: current_user, friend_id: requester), class: 'btn btn-danger', method: :delete %>
 						<%= link_to 'Accept', friendship_path(user_id: current_user, friend_id: requester), class: 'btn btn-primary', method: :patch %>
