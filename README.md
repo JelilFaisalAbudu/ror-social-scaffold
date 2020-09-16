@@ -2,6 +2,8 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![screenshot](app/assets/images/ror-social-scaffold.png)
+
 ## Built With
 
 - Ruby v2.7.0
