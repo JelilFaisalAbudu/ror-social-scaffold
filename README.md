@@ -9,8 +9,7 @@
 
 ## Live Demo
 
-TBA
-
+[Live Demo Link](https://jelil-ror-social-scaffold.herokuapp.com/)
 
 ## Getting Started
 
@@ -21,29 +20,28 @@ To get a local copy up and running follow these simple example steps.
 Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
+Heroku CL
 
 ### Setup
 
 Instal gems with:
 
-```
+```bash
 bundle install
 ```
 
 Setup database with:
 
-```
+```bash
    rails db:create
    rails db:migrate
 ```
-
-
 
 ### Usage
 
 Start server with:
 
-```
+```bash
     rails server
 ```
 
@@ -51,7 +49,7 @@ Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
-```
+```bash
     rpsec --format documentation
 ```
 
@@ -59,11 +57,36 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
-TBA
+Deploy your of the app to Heroku using the following steps in your terminal.
+
+- Navigate to the project's directory and make changes to your codes.
+- Commit your works
+- Run
+
+```bash
+    heroku create <your-app-name(optional)>
+```
+
+```bash
+    git push heroku master
+```
+
+#### NOTE
+
+In case you want deploy to Heroku from a defferent branch aprt from the master branch,
+all you to do is to skip the second step and run this;
+
+```bash
+    git push heroku <branch-name>:master
+```
 
 ## Authors
 
-TBA
+👤 Jelil Faisal Abudu
+
+- Github: [@githubhandle](https://github.com/JelilFaisalAbudu)
+- Twitter: [@twitterhandle](https://twitter.com/jelilabudu)
+- Linkedin: [linkedin](www.linkedin.com/in/jelilfaisalabudu)
 
 ## 🤝 Contributing
 
@@ -77,9 +100,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
-
-## 📝 License
-
-TBA
-
+> RailsSpace
+> My Stand-up Team Memmbers
