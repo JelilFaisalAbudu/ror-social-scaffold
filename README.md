@@ -17,10 +17,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-Heroku CL
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
+- Heroku CL
 
 ### Setup
 
@@ -84,9 +84,9 @@ all you to do is to skip the second step and run this;
 
 👤 Jelil Faisal Abudu
 
-- Github: [@githubhandle](https://github.com/JelilFaisalAbudu)
-- Twitter: [@twitterhandle](https://twitter.com/jelilabudu)
-- Linkedin: [linkedin](www.linkedin.com/in/jelilfaisalabudu)
+- Github: [JelilFaisalAbudu](https://github.com/JelilFaisalAbudu)
+- Twitter: [@jelilabudu](https://twitter.com/jelilabudu)
+- Linkedin: [jelilfaisalabudu](www.linkedin.com/in/jelilfaisalabudu)
 
 ## 🤝 Contributing
 
@@ -100,5 +100,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-> RailsSpace
-> My Stand-up Team Memmbers
+- RailsSpace
+- My Stand-up Team Memmbers
