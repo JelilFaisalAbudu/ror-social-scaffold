@@ -1,0 +1,21 @@
+<div class="dropdown col col-md-4">
+	<button class="btn btn-secondary dropdown-toggle w-100 text-bolder" type="button" id="dropdownMenuButton"
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<%= pluralize(@user.pending_friends.count, "Pending Friends") %>
+	</button>
+	<div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+		<div class="card">
+			<ul class="list-group list-group-flush">
+				<% @user.pending_friends.each do |pending_friend| %>
+				<li class="list-group-item dropdown-item">
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<%= link_to pending_friend.name, user_path(pending_friend) %>
+						<%= link_to "Cancel request", cancel_path(user_id: current_user, friend_id: pending_friend), class: 'btn btn-warning', method: :delete %>
+					</div>
+					<br>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

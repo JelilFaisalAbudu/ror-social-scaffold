@@ -1,9 +1,45 @@
 <section class="user-section">
-  <h2><%= "Name: #{@user.name}" %></h2>
-  <article class="timeline">
-    <h3>Recent posts:</h3>
-    <ul class="posts">
-      <%= render @posts %>
-    </ul>
-  </article>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top" src="https://picsum.photos/500/150/?random">
+            <div class="card-block">
+              <figure class="profile shadow-lg">
+                <img src="https://picsum.photos/200/150/?random" class="profile-avatar" alt="">
+              </figure>
+              <h4 class="card-title"><%= @user.name %></h4>
+              <div class="meta">
+
+              </div>
+              <div class="card-text">
+
+              </div>
+            </div>
+            <div class="card-footer">
+              <%= ask_friendship_or(current_user, @user) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-3">
+        <div class="row">
+          <%= friends %>
+          <%= requested_friends %>
+          <%= pending_friends %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <article class="timeline">
+      <h3>Recent posts:</h3>
+      <ul class="posts">
+        <%= render @posts %>
+      </ul>
+    </article>
+  </div>
+
 </section>

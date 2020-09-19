@@ -1,0 +1,19 @@
+<div class="dropdown col col-md-4">
+	<button class="btn btn-secondary dropdown-toggle w-100 text-bolder" type="button" id="dropdownMenuButton"
+		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<%= "Friends: #{@user.friends.count}" %>
+	</button>
+	<div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+		<div class="card">
+			<ul class="list-group list-group-flush">
+				<% @user.friends.each do |friend| %>
+				<li class="list-group-item dropdown-item">
+					<%= link_to friend.name, user_path(friend) %>
+					<%= delete_friend(friend) %>
+					<br>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
